@@ -19,6 +19,10 @@
                     <label for="twitter_hashtag"/>
                     <field name="twitter_hashtag" class="oe_inline"/>
                 </div>
+                <div>
+                    <span>Delete old stored tweets from Odoo Database</span>
+                    <button string="Delete" type="object" name="purge_tweets" class="oe_inline oe_highlight ml16"/>
+                </div>
               </xpath>
 
               <xpath expr="//field[@name='twitter_screen_name']/.." position="attributes">
