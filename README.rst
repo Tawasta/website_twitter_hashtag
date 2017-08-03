@@ -15,7 +15,7 @@ Installation
 
 Configuration
 =============
-* Go to Website Admin -> Configuration and set your Twitter API Key and Twitter API Secret as you would with the twitter_roller module
+* Go to Website Admin -> Configuration and set your Twitter API Key and Twitter API Secret as you would with the website_twitter module
 * In the same view, set the Twitter search mode to "By hashtag", and type the hashtag in the new field, e.g. "#odoo"
 * Reconfigure the "Fetch new tweets by hashtag" scheduler's frequency in Settings -> Scheduled actions if needed. The default frequency is every 2 hours.
 * Note: the front-end has not been edited. It does not do any tweet filtering based on hashtags or favorites - it shows whatever has been fetched from Twitter API to Odoo DB. If you had website_twitter in use previously and it has already fetched some favorited tweets, you probably want to delete them so they don't show up in roller anymore after switching to hashtags. This can be done with the "Delete saved tweets" button.
