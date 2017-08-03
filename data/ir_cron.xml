@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="ir_cron_refresh_hashtag_tweets" model="ir.cron">
+            <field name="name">Fetch new Tweets by hashtag</field>
+            <field name="interval_number">2</field>
+            <field name="interval_type">hours</field>
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="False"/>
+            <field name="model">website</field>
+            <field name="function">_refresh_hashtag_tweets</field>
+            <field name="args">()</field>
+        </record>
+
+        <!-- Deactivate the website_twitter scheduled action that fetches favorited tweets -->
+        <record id="website_twitter.ir_cron_twitter_actions" model="ir.cron">
+            <field name="active" eval="False"/>
+        </record>        
+    </data>
+</openerp>

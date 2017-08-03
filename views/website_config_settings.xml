@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="view_website_config_settings" model="ir.ui.view">
+            <field name="name">Twitter hashtag settings</field>
+            <field name="model">website.config.settings</field>
+            <field name="inherit_id" ref="website_twitter.view_website_config_settings"/>
+            <field name="arch" type="xml">
+
+              <xpath expr="//field[@name='twitter_screen_name']/.." position="before">
+                <div>
+                    <label for="twitter_search_mode"/>
+                    <field name="twitter_search_mode" class="oe_inline"/>
+                </div>              
+              </xpath>
+
+              <xpath expr="//field[@name='twitter_screen_name']/.." position="after">
+                <div attrs="{ 'invisible': [('twitter_search_mode', '!=', 'hashtag')] }">
+                    <label for="twitter_hashtag"/>
+                    <field name="twitter_hashtag" class="oe_inline"/>
+                </div>
+              </xpath>
+
+              <xpath expr="//field[@name='twitter_screen_name']/.." position="attributes">
+                <attribute name="attrs">{ 'invisible': [('twitter_search_mode', '!=', 'favorites')] }</attribute>
+              </xpath>
+
+            </field>
+        </record>
+    </data>
+</openerp>
