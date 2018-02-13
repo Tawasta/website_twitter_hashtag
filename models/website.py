@@ -1,19 +1,19 @@
 # -*- coding: utf-8 -*-
-from openerp.osv import fields, osv
+from odoo import fields, osv, models
 import logging
 import json
 import urllib
 
 _logger = logging.getLogger(__name__)
 
-API_ENDPOINT = 'https://api.twitter.com'
-API_VERSION = '1.1'
-REQUEST_TOKEN_URL = '%s/oauth2/token' % API_ENDPOINT
-REQUEST_TWEETS_BY_HASHTAG_URL = '%s/%s/search/tweets.json' % (API_ENDPOINT, API_VERSION)
-URLOPEN_TIMEOUT = 10
+# API_ENDPOINT = 'https://api.twitter.com'
+# API_VERSION = '1.1'
+# REQUEST_TOKEN_URL = '%s/oauth2/token' % API_ENDPOINT
+# REQUEST_TWEETS_BY_HASHTAG_URL = '%s/%s/search/tweets.json' % (API_ENDPOINT, API_VERSION)
+# URLOPEN_TIMEOUT = 10
 
 
-class Website(osv.osv):
+class Website(models.Model):
     ''' Based on the code of website_twitter module, but with very slight modifications to enable hashtag-based tweet fetching'''
 
     _inherit = 'website'
@@ -70,8 +70,8 @@ class Website(osv.osv):
         return tweet_ids
 
     _columns = {
-        'twitter_search_mode': fields.selection(_TWITTER_SEARCH_MODES, 'Twitter Search Mode'),
-        'twitter_hashtag': fields.char('Hashtag', help='''Hashtag to search''')
+        'twitter_search_mode': fields.Selection(_TWITTER_SEARCH_MODES, 'Twitter Search Mode'),
+        'twitter_hashtag': fields.Char('Hashtag', help='''Hashtag to search''')
     }
 
     _defaults = {
