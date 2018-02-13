@@ -35,13 +35,15 @@ Credits
 
 Contributors
 ------------
+* Jarmo Kortetjärvi <jarmo.kortetjarvi@tawasta.fi>
 * Timo Talvitie <timo@vizucom.com>
+* Valtteri Lattu <valtteri.lattu@tawasta.fi>
 
 Maintainer
 ----------
-.. image:: http://vizucom.com/logo.png
-   :alt: Vizucom Oy
-   :target: http://www.vizucom.com
 
+.. image:: http://tawasta.fi/templates/tawastrap/images/logo.png
+:alt: Oy Tawasta OS Technologies Ltd.
+   :target: http://tawasta.fi/
 
-This module is maintained by Vizucom Oy
+This module is maintained by Oy Tawasta OS Technologies Ltd.
