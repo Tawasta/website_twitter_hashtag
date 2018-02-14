@@ -43,7 +43,7 @@ Maintainer
 ----------
 
 .. image:: http://tawasta.fi/templates/tawastrap/images/logo.png
-:alt: Oy Tawasta OS Technologies Ltd.
+   :alt: Oy Tawasta OS Technologies Ltd.
    :target: http://tawasta.fi/
 
 This module is maintained by Oy Tawasta OS Technologies Ltd.
