@@ -2,9 +2,9 @@
 from odoo import models, fields, api
 
 
-class WebsiteConfigSettings(models.TransientModel):
+class ResConfigSettings(models.TransientModel):
 
-    _inherit = 'website.config.settings'
+    _inherit = 'res.config.settings'
 
     _TWITTER_SEARCH_MODES = [
         ('favorites', 'Favorites'),

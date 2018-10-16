@@ -7,9 +7,8 @@
             <field name="interval_type">hours</field>
             <field name="numbercall">-1</field>
             <field name="doall" eval="False"/>
-            <field name="model">website</field>
-            <field name="function">_refresh_hashtag_tweets</field>
-            <field name="args">()</field>
+            <field name="model_id" ref="model_website"></field>
+            <field name="code">model._refresh_hashtag_tweets()</field>
         </record>
 
         <!-- Deactivate the website_twitter scheduled action that fetches favorited tweets -->

@@ -20,7 +20,7 @@
 {
     'name': 'Hashtag support for Twitter Roller',
     'summary': 'Fetch tweets based on hashtags instead of favorites',
-    'version': '10.0.1.0.0',
+    'version': '12.0.0.0.0',
     'category': 'Warehouse',
     'website': 'http://www.vizucom.com',
     'author': 'Vizucom Oy',
